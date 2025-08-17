@@ -1,6 +1,6 @@
 import { Superhero, CreateSuperheroRequest, PaginationResponse } from '../types/superhero';
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL ? `${process.env.REACT_APP_API_URL}/api` : 'http://localhost:3001/api';
 
 export const superheroAPI = {
   async getAll(page: number = 1, limit: number = 5): Promise<PaginationResponse<Superhero>> {

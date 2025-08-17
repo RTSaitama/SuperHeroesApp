@@ -1,4 +1,4 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Superhero } from '../types/superhero';
 
 interface SuperheroCardProps {
@@ -6,15 +6,15 @@ interface SuperheroCardProps {
   onEdit?: (superhero: Superhero) => void;
   onDelete?: (id: string) => void;
   onUploadImages?: (id: string, files: File[]) => void;
-  onDeleteImage?: (id: string, imageName: string) => void; 
+  onDeleteImage?: (id: string, imageName: string) => void;
 }
 
-export const SuperheroCard: React.FC<SuperheroCardProps> = ({ 
-  superhero, 
-  onEdit, 
+export const SuperheroCard: React.FC<SuperheroCardProps> = ({
+  superhero,
+  onEdit,
   onDelete,
   onUploadImages,
-  onDeleteImage 
+  onDeleteImage
 }) => {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
 
@@ -38,10 +38,10 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
   };
 
   return (
-    <div style={{ 
+    <div style={{
       background: 'linear-gradient(145deg, rgba(0, 0, 0, 0.8), rgba(25, 25, 112, 0.7), rgba(139, 0, 0, 0.6))',
-      border: '3px solid #FFD700', 
-      margin: '15px 0', 
+      border: '3px solid #FFD700',
+      margin: '15px 0',
       padding: '20px',
       borderRadius: '15px',
       boxShadow: '0 8px 25px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.3)',
@@ -58,11 +58,11 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
         borderRadius: '50%',
         zIndex: 1
       }} />
-      
+
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', position: 'relative', zIndex: 2 }}>
         <div style={{ flex: 1 }}>
-          <h3 style={{ 
-            margin: '0 0 15px 0', 
+          <h3 style={{
+            margin: '0 0 15px 0',
             color: '#FFD700',
             fontSize: '1.8rem',
             fontWeight: 'bold',
@@ -72,18 +72,18 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
             WebkitTextFillColor: 'transparent',
             filter: 'drop-shadow(2px 2px 0px #000)'
           }}>
-            🦸‍♂️ {superhero.nickname} 
-            <span style={{ 
+            🦸‍♂️ {superhero.nickname}
+            <span style={{
               fontSize: '1.2rem',
-              fontWeight: 'normal', 
+              fontWeight: 'normal',
               color: '#87CEEB',
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
             }}>
               ({superhero.real_name})
             </span>
           </h3>
-          
-          <p style={{ 
+
+          <p style={{
             margin: '8px 0',
             color: '#FFF',
             textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
@@ -94,8 +94,8 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
           }}>
             <strong style={{ color: '#FFD700' }}>⚡ Powers:</strong> {superhero.superpowers}
           </p>
-          
-          <p style={{ 
+
+          <p style={{
             margin: '8px 0',
             color: '#FFF',
             textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
@@ -106,10 +106,10 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
           }}>
             <strong style={{ color: '#FFD700' }}>💬 Catchphrase:</strong> "{superhero.catch_phrase}"
           </p>
-          
-          <p style={{ 
-            margin: '8px 0', 
-            fontSize: '14px', 
+
+          <p style={{
+            margin: '8px 0',
+            fontSize: '14px',
             color: '#E6E6FA',
             textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
@@ -121,22 +121,22 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
           </p>
 
           {superhero.images && superhero.images.length > 0 && (
-            <div style={{ 
+            <div style={{
               margin: '15px 0',
               padding: '15px',
               backgroundColor: 'rgba(0, 0, 0, 0.6)',
               borderRadius: '10px',
               border: '2px solid rgba(255, 215, 0, 0.3)'
             }}>
-              <strong style={{ 
+              <strong style={{
                 color: '#FFD700',
                 fontSize: '1.1rem',
                 textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
               }}>🖼️ Hero Gallery:</strong>
               <div style={{ display: 'flex', gap: '15px', marginTop: '10px', flexWrap: 'wrap' }}>
                 {superhero.images.map((image, index) => (
-                  <div key={index} style={{ 
-                    position: 'relative', 
+                  <div key={index} style={{
+                    position: 'relative',
                     display: 'inline-block',
                     borderRadius: '10px',
                     overflow: 'hidden',
@@ -144,7 +144,7 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
                     boxShadow: '0 5px 15px rgba(0, 0, 0, 0.5)'
                   }}>
                     <img
-                      src={`http://localhost:3001/uploads/${image}`}
+                      src={`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/uploads/${image}`} 
                       alt={`${superhero.nickname} ${index + 1}`}
                       style={{
                         width: '200px',
@@ -201,15 +201,15 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
           )}
 
           {onUploadImages && (
-            <div style={{ 
-              margin: '15px 0', 
-              padding: '15px', 
+            <div style={{
+              margin: '15px 0',
+              padding: '15px',
               background: 'linear-gradient(135deg, rgba(25, 25, 112, 0.8), rgba(0, 0, 0, 0.8))',
               borderRadius: '10px',
               border: '2px solid rgba(135, 206, 235, 0.5)'
             }}>
               <div style={{ marginBottom: '10px' }}>
-                <strong style={{ 
+                <strong style={{
                   color: '#87CEEB',
                   fontSize: '1.1rem',
                   textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
@@ -220,7 +220,7 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
                 multiple
                 accept="image/*"
                 onChange={handleFileChange}
-                style={{ 
+                style={{
                   marginBottom: '10px',
                   padding: '8px',
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
@@ -231,7 +231,7 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
               />
               {selectedFiles.length > 0 && (
                 <div>
-                  <small style={{ 
+                  <small style={{
                     color: '#87CEEB',
                     backgroundColor: 'rgba(0, 0, 0, 0.6)',
                     padding: '5px 10px',
@@ -271,8 +271,8 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
               )}
             </div>
           )}
-          
-          <small style={{ 
+
+          <small style={{
             color: '#B0C4DE',
             backgroundColor: 'rgba(0, 0, 0, 0.4)',
             padding: '5px 10px',
@@ -282,12 +282,12 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
             🕒 Created: {new Date(superhero.created_at).toLocaleDateString()}
           </small>
         </div>
-        
+
         <div style={{ marginLeft: '20px', display: 'flex', flexDirection: 'column', gap: '10px' }}>
           {onEdit && (
-            <button 
+            <button
               onClick={() => onEdit(superhero)}
-              style={{ 
+              style={{
                 padding: '10px 15px',
                 background: 'linear-gradient(45deg, #007bff, #0056b3)',
                 color: '#FFD700',
@@ -312,11 +312,11 @@ export const SuperheroCard: React.FC<SuperheroCardProps> = ({
               ✏️ Edit Hero
             </button>
           )}
-          
+
           {onDelete && (
-            <button 
+            <button
               onClick={() => onDelete(superhero.id)}
-              style={{ 
+              style={{
                 padding: '10px 15px',
                 background: 'linear-gradient(45deg, #dc3545, #c82333)',
                 color: '#FFD700',
