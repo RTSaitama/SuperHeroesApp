@@ -184,3 +184,64 @@ export const uploadSuperheroImages = (req: Request, res: Response): void => {
     res.status(500).json({ error: 'Internal server error' });
   }
 };
+export const deleteSuperheroImage = (req: Request, res: Response): void => {
+  try {
+    const { id, imageName } = req.params;
+    
+    if (!id || !imageName) {
+      res.status(400).json({ error: 'Superhero ID and image name are required' });
+      return;
+    }
+    
+    const data = readData();
+    
+
+    const heroIndex = data.superheroes.findIndex(hero => hero.id === id);
+    
+    if (heroIndex === -1) {
+      res.status(404).json({ error: 'Superhero not found' });
+      return;
+    }
+    
+    const existingHero = data.superheroes[heroIndex];
+    
+
+    const imageIndex = existingHero.images.indexOf(imageName);
+    if (imageIndex === -1) {
+      res.status(404).json({ error: 'Image not found' });
+      return;
+    }
+    
+
+    const updatedImages = existingHero.images.filter(img => img !== imageName);
+    
+    const updatedHero: Superhero = {
+      ...existingHero,
+      images: updatedImages,
+      updated_at: new Date().toISOString()
+    };
+
+    data.superheroes[heroIndex] = updatedHero;
+    
+
+    writeData(data);
+    
+
+    const fs = require('fs');
+    const path = require('path');
+    const imagePath = path.join(__dirname, '../../uploads', imageName);
+    
+    if (fs.existsSync(imagePath)) {
+      fs.unlinkSync(imagePath);
+    }
+    
+    res.json({
+      message: 'Image deleted successfully',
+      deletedImage: imageName,
+      superhero: updatedHero
+    });
+  } catch (error) {
+    console.error('Error in deleteSuperheroImage:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+};

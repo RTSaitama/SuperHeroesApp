@@ -7,20 +7,11 @@
       "origin_description": "An Amazon warrior princess from the island of Themyscira",
       "superpowers": "Super strength, flight, lasso of truth, bulletproof bracelets",
       "catch_phrase": "Great Hera!",
-      "images": [],
+      "images": [
+        "2a0eda0b-5540-4ea4-9be9-ff294713104b.webp"
+      ],
       "created_at": "2025-08-15T09:37:37.416Z",
-      "updated_at": "2025-08-15T09:37:37.417Z"
-    },
-    {
-      "id": "90cd0eb1-cc23-402e-878f-10580a688275",
-      "nickname": "Spider-Man",
-      "real_name": "Peter Parker",
-      "origin_description": "Bitten by a radioactive spider",
-      "superpowers": "Wall-crawling, web-shooting, spider-sense",
-      "catch_phrase": "With great power comes great responsibility!",
-      "images": [],
-      "created_at": "2025-08-15T09:44:09.205Z",
-      "updated_at": "2025-08-15T09:44:09.205Z"
+      "updated_at": "2025-08-17T13:51:40.898Z"
     },
     {
       "id": "0351e92c-7800-465a-918d-29995f29d8ad",
@@ -29,20 +20,11 @@
       "origin_description": "Bitten by a radioactive spider",
       "superpowers": "Wall-crawling, web-shooting, spider-sense",
       "catch_phrase": "With great power comes great responsibility!",
-      "images": [],
+      "images": [
+        "2daa49fd-6140-4f87-b4db-ffaaa28d1fd2.webp"
+      ],
       "created_at": "2025-08-15T09:49:48.649Z",
-      "updated_at": "2025-08-15T09:49:48.649Z"
-    },
-    {
-      "id": "6c64ac89-e9b7-4df9-b3d0-7a90bbba603a",
-      "nickname": "Flash",
-      "real_name": "Barry Allen",
-      "origin_description": "Struck by lightning and doused with chemicals",
-      "superpowers": "Super speed, time travel, dimensional travel",
-      "catch_phrase": "My name is Barry Allen and I am the fastest man alive!",
-      "images": [],
-      "created_at": "2025-08-15T09:52:51.777Z",
-      "updated_at": "2025-08-15T09:52:51.777Z"
+      "updated_at": "2025-08-17T13:05:51.485Z"
     },
     {
       "id": "f8a1b060-7c1b-4bc8-a394-55aacca2afa2",
@@ -51,10 +33,38 @@
       "origin_description": "Test origin",
       "superpowers": "Test powers",
       "catch_phrase": "Test phrase",
-      "images": [],
+      "images": [
+        "965ba82b-0781-49c8-8e12-261525be6ba6.jpg"
+      ],
       "created_at": "2025-08-17T12:20:45.047Z",
-      "updated_at": "2025-08-17T12:20:45.047Z"
+      "updated_at": "2025-08-17T13:10:35.283Z"
+    },
+    {
+      "id": "74bd7bfd-5d78-4563-bab9-6d321dd38722",
+      "nickname": "Hulk",
+      "real_name": " Bruce Banner",
+      "origin_description": "A brilliant scientist exposed to gamma radiation during a bomb test, transforming him into a green-skinned monster when angry or stressed. The more angry he gets, the stronger he becomes.",
+      "superpowers": "Superhuman strength that increases with rage, near-invulnerability, regenerative healing factor, immunity to diseases, superhuman speed and leaping ability",
+      "catch_phrase": "Hulk smash!",
+      "images": [
+        "4d5e3cb1-59b6-427b-9077-5108a3b543cd.jpg"
+      ],
+      "created_at": "2025-08-17T13:04:40.736Z",
+      "updated_at": "2025-08-17T13:04:59.260Z"
+    },
+    {
+      "id": "813324a4-b9ad-4da4-afe6-0239d84b4da1",
+      "nickname": "Flash",
+      "real_name": "Barry Allen",
+      "origin_description": "Struck by lightning and doused with chemicals",
+      "superpowers": "Super speed, time travel, dimensional travel\n",
+      "catch_phrase": "\"My name is Barry Allen and I am the fastest man alive!\"",
+      "images": [
+        "41f4ecf9-e519-449e-9344-32f6df909b05.jpg"
+      ],
+      "created_at": "2025-08-17T13:07:49.107Z",
+      "updated_at": "2025-08-17T14:18:04.713Z"
     }
   ],
-  "nextId": 9
+  "nextId": 11
 }
