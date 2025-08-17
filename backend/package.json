@@ -1,0 +1,43 @@
+{
+  "name": "superheroes-backend",
+  "version": "1.0.0",
+  "description": "Superheroes API Backend",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "superhero",
+    "api",
+    "express",
+    "typescript"
+  ],
+  "author": "RTSaitama",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.2.1",
+    "@types/uuid": "^10.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "joi": "^18.0.0",
+    "multer": "^2.0.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.0.5",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  }
+}
