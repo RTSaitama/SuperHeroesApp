@@ -6,7 +6,7 @@ A full-stack web application for managing superheroes with CRUD operations, imag
 - **Frontend:** https://super-heroes-app.vercel.app/
 - **Backend API:** https://superheroesapp-js1p.onrender.com/
 ### Repository
-- **GitHub:** https://github.com/your-username/superhero-app
+- **GitHub:** https://github.com/RTSaitama/SuperHeroesApp
 
 ## 🚀 Features
 
