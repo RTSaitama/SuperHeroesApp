@@ -2,6 +2,12 @@
 
 A full-stack web application for managing superheroes with CRUD operations, image uploads, and pagination.
 
+### Live Demo
+- **Frontend:** https://super-heroes-app.vercel.app/
+- **Backend API:** https://superheroesapp-js1p.onrender.com/
+### Repository
+- **GitHub:** https://github.com/your-username/superhero-app
+
 ## 🚀 Features
 
 - **CRUD Operations**: Create, Read, Update, Delete superheroes
@@ -34,30 +40,7 @@ A full-stack web application for managing superheroes with CRUD operations, imag
 - **React Router** - Navigation
 - **React Testing Library** - Component testing
 
-## 📁 Project Structure
-SuperHeroesApp/
-├── backend/                 # Express.js API server
-│   ├── src/
-│   │   ├── controllers/     # API route handlers
-│   │   ├── routes/          # Express routes
-│   │   ├── middleware/      # Custom middleware (file upload)
-│   │   ├── types/           # TypeScript type definitions
-│   │   ├── utils/           # Utility functions
-│   │   ├── tests/           # Unit tests
-│   │   └── server.ts        # Main server file
-│   ├── data/                # JSON data storage
-│   ├── uploads/             # Uploaded images
-│   └── package.json
-├── frontend/                # React application
-│   ├── src/
-│   │   ├── components/      # Reusable React components
-│   │   ├── stores/          # Zustand state stores
-│   │   ├── services/        # API client
-│   │   ├── types/           # TypeScript types
-│   │   └── App.tsx          # Main App component
-│   └── package.json
-└── README.md
-## 🚀 Quick Start
+
 
 ### Prerequisites
 - Node.js (v16 or higher)
